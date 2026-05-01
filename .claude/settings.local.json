@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pdftotext -layout \"C:/Users/HP/Desktop/Volunteer/iha-frontend/IHA_Website_Technical_Spec.pdf\" \"C:/Users/HP/Desktop/Volunteer/iha-frontend/IHA_Spec.txt\")"
+    ]
+  }
+}

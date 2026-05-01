@@ -37,7 +37,7 @@ export default function BlogSection({ posts }: BlogGridProps) {
         </div>
 
         <div className="flex justify-end">
-          <Button className="mt-12" size="lg" onClick={handleViewMore}>
+          <Button className="mt-12 cursor-pointer" size="lg" onClick={handleViewMore}>
             View More
           </Button>
         </div>

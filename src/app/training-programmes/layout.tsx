@@ -8,7 +8,8 @@ const layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <ProjectHeader
-
+        title="Training Programmes"
+        description="Competency-based training in digital health that equips health workers from the frontline to leadership level with the competence, confidence, and capability to deliver better care."
       />
       {children}
       <ContactUsSection />

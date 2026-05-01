@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/programs",
+        destination: "/training-programmes",
+        permanent: true,
+      },
+    ];
+  },
   // output: "export",
   // distDir: "dist",
 };

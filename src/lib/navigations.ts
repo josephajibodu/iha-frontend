@@ -7,10 +7,10 @@ const navigation: { main: LinkItem[] } = {
     {
       title: "Programs",
       menu: [
-        LINKS.VentureLab,
-        LINKS.InnovationSupport,
-        LINKS.SchoolOfHealthcareInnovation,
-        LINKS.InnovatorsNetwork,
+        LINKS.TrainingProgrammes,
+        LINKS.Innovations,
+        LINKS.Research,
+        LINKS.Partnership,
       ],
     },
     LINKS.AHIF2026,

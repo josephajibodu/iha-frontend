@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Linkedin } from "lucide-react";
 import teamData from "@/json/teamData.json";
+import { cn } from "@/lib/utils";
 
 const teamDataArray = teamData as MemberType[];
 
@@ -13,156 +14,103 @@ interface MemberType {
   tag: string;
 }
 
+const TAGS = [
+  "Leadership",
+  "Design & Innovation",
+  "Partnership & Grants",
+  "Research & Development",
+  "Communications",
+  "Consultations",
+  "Programs",
+];
+
 export default function TeamMembers() {
   const [activeTag, setActiveTag] = useState("Leadership");
 
-  const tags = [
-    "Leadership",
-    "Design & Innovation",
-    "Partnership & Grants",
-    "Research & Development",
-    "Communications",
-    "Consultations",
-    "Programs"
-  ];
-
   const renderMember = (member: MemberType) => (
-    <div key={member.name} className="h-[380px] flex items-end justify-center">
-      <div className="relative flex flex-col items-center justify-center text-center px-6 text-white pb-4 h-[230px] bg-primary/40 rounded-xl shadow-lg w-[280px]">
-        {/* Hexagonal Avatar */}
-        <div className="absolute -top-20 left-1/2 transform -translate-x-1/2">
-          <div className="relative w-40 h-40">
-            {member.image ? (
-              <div
-                className="w-full h-full overflow-hidden"
-                style={{
-                  clipPath:
-                    "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                  filter: "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3))",
-                }}
-              >
-                <div className="w-full h-full relative">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={160}
-                    height={160}
-                    className="w-full h-full object-cover"
-                    style={{
-                      objectPosition: "center top",
-                      filter:
-                        "drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))",
-                    }}
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      clipPath:
-                        "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                      boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.2)",
-                    }}
-                  />
-                </div>
-              </div>
-            ) : (
-              <div
-                className="w-full h-full bg-gray-200 flex items-center justify-center"
-                style={{
-                  clipPath:
-                    "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-                  filter: "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3))",
-                }}
-              >
-                <span className="text-gray-600 text-2xl font-bold">
-                  {member.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </span>
-              </div>
-            )}
+    <article
+      key={member.name}
+      className="flex flex-col items-center text-center bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6"
+    >
+      <div className="relative w-40 h-40 rounded-2xl overflow-hidden bg-gray-100">
+        {member.image ? (
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            sizes="160px"
+            className="object-cover object-top"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gray-200">
+            <span className="text-gray-600 text-2xl font-bold">
+              {member.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </span>
           </div>
-        </div>
-
-        {/* Member Info */}
-        <div className="flex flex-col items-center justify-center mt-12">
-          <h4 className="font-bold mb-1 text-primary text-xl sm:text-2xl pt-8">
-            {member.name}
-          </h4>
-          <p className="text-sm text-primary mb-2">{member.title}</p>
-          {member.linkedIn && (
-            <a
-              href={member.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="size-7 flex justify-center items-center rounded-full bg-primary/40"
-            >
-              <Linkedin color="white" size={18} className="p-[2px]" />
-            </a>
-          )}
-        </div>
+        )}
       </div>
-    </div>
+
+      <h3 className="font-bold text-primary text-lg sm:text-xl mt-5">
+        {member.name}
+      </h3>
+      <p className="text-sm text-gray-700 mt-1 mb-4 min-h-[2.5em]">
+        {member.title}
+      </p>
+
+      {member.linkedIn && (
+        <a
+          href={member.linkedIn}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${member.name} on LinkedIn`}
+          className="size-9 flex justify-center items-center rounded-full bg-[#0A66C2] hover:bg-[#004182] transition-colors"
+        >
+          <Linkedin color="white" size={18} />
+        </a>
+      )}
+    </article>
   );
+
+  const filtered = teamDataArray.filter((m) => m.tag === activeTag);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      {/* Tag Filters */}
-      <div className="px-4 max-w-screen-xl mx-auto flex justify-center mb-12">
-        <div className="flex gap-4 overflow-x-auto py-0">
-          {tags.map((tag, index) => (
+      <nav
+        aria-label="Filter team by department"
+        className="px-4 max-w-screen-xl mx-auto flex justify-center mb-12"
+      >
+        <div className="flex gap-3 overflow-x-auto py-2">
+          {TAGS.map((tag) => (
             <button
-              key={index}
+              key={tag}
+              type="button"
               onClick={() => setActiveTag(tag)}
-              className={`block border border-slate-600 px-4 py-2 text-sm md:text-base rounded-sm cursor-pointer text-center text-nowrap 
-              ${activeTag === tag
-                  ? "bg-primary-bright-orange"
-                  : "bg-white"
-                }`}
+              aria-pressed={activeTag === tag}
+              className={cn(
+                "border border-slate-300 px-4 py-2 text-sm md:text-base rounded-md whitespace-nowrap transition-colors",
+                activeTag === tag
+                  ? "bg-primary-bright-orange border-primary-bright-orange"
+                  : "bg-white hover:border-[#006666]",
+              )}
             >
               {tag}
             </button>
           ))}
         </div>
-      </div>
+      </nav>
 
-      {/* Team Members Grid - Center leftover row */}
-      <div className="px-4">
-        {(() => {
-          const filtered = teamDataArray.filter(
-            (member) => member.tag === activeTag
-          );
-          const itemsPerRow = 4;
-          const fullRowsCount = Math.floor(filtered.length / itemsPerRow);
-          const fullRows = filtered.slice(0, fullRowsCount * itemsPerRow);
-          const leftover = filtered.slice(fullRowsCount * itemsPerRow);
-
-          return (
-            <>
-              {/* Full rows */}
-              {fullRows.length > 0 && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center justify-center mx-auto">
-                  {fullRows.map((member) => renderMember(member))}
-                </div>
-              )}
-
-              {/* Last row with centering */}
-              {leftover.length > 0 && (
-                <div
-                  className={`mt-6 grid gap-6 items-center justify-center mx-auto`}
-                  style={{
-                    gridTemplateColumns: `repeat(${leftover.length}, minmax(0, 1fr))`,
-                    justifyContent: "center",
-                    justifyItems: "center",
-                  }}
-                >
-                  {leftover.map((member) => renderMember(member))}
-                </div>
-              )}
-            </>
-          );
-        })()}
-      </div>
+      {filtered.length === 0 ? (
+        <p className="text-center text-gray-600 py-12">
+          Team members for this department coming soon.
+        </p>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filtered.map((member) => renderMember(member))}
+        </div>
+      )}
     </div>
   );
 }

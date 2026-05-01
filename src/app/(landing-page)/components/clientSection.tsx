@@ -1,30 +1,32 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import heroSlide1 from "@/assets/images/hero/slide1.png";
 import heroSlide2 from "@/assets/images/hero/slide2.png";
 import heroSlide3 from "@/assets/images/hero/slide3.png";
 import background from "@/assets/images/background.png";
 import communityImage from "@/assets/images/community.png";
-import TestimonialSection from "./testimonial-section";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import OurWorkSection from "./our-work-section";
+import PortfolioOfChange from "./portfolio-of-change";
 import { Button } from "@/components/ui/button";
 import CountUp from "react-countup";
 import PartnerSection from "./partners-section";
 import ContactUsSection from "@/components/contact-us-section";
+import TypewriterText from "@/components/typewriter-text";
 
+const WHATSAPP_COMMUNITY_URL =
+  "https://chat.whatsapp.com/LRE8WPsqyQ9ETktAcfZxgy?mode=gi_t";
 
 const statistics = [
   { label: "Healthcare solution developed", value: 250 },
   { label: "Healthcare Innovators Trained", value: 1200 },
   { label: "Research conducted", value: 100 },
 ];
-
 
 export const ClientSection = () => {
   return (
@@ -34,22 +36,26 @@ export const ClientSection = () => {
         <div className="absolute inset-0 bg-primary/50 z-[4]" />
 
         <div className="absolute inset-0 z-[5]">
-          <div className="flex flex-col items-center justify-center max-w-screen-xl mx-auto h-full">
-            <h1 className="text-white font-bold text-center text-4xl lg:text-6xl lg:leading-tight">
-              Advancing{" "}
-              <span className="text-accent">Equitable Healthcare</span> across{" "}
-              <br />
-              Africa through Digital Innovation
+          <div className="flex flex-col items-center justify-center max-w-screen-xl mx-auto h-full px-4">
+            <h1 className="text-white font-bold text-center text-3xl sm:text-4xl lg:text-6xl lg:leading-tight">
+              Advancing Equitable Healthcare in Africa through{" "}
+              <TypewriterText
+                phrases={[
+                  "Innovation",
+                  "Research",
+                  "Workforce Capacity Development",
+                ]}
+                className="text-accent"
+              />
             </h1>
-            <p className="py-2.5 px-8 mt-9 rounded-lg text-xl sm:text-2xl font-[500] bg-primary/25 backdrop-blur text-white border border-white/25">
-              By Africans, for Africa
-            </p>
+
             <Button
               className="mt-8 sm:mt-14 text-md"
               size="lg"
               variant="secondary"
+              asChild
             >
-              Learn More
+              <Link href="/about">Learn More</Link>
             </Button>
           </div>
         </div>
@@ -70,6 +76,7 @@ export const ClientSection = () => {
                 width={1440}
                 height={664}
                 className="w-full h-full object-cover"
+                priority
               />
             </CarouselItem>
 
@@ -126,20 +133,14 @@ export const ClientSection = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* White overlay */}
         <div className="absolute inset-0 bg-white opacity-85"></div>
 
         <div className="relative z-10">
-          <OurWorkSection />
-
-          <TestimonialSection />
+          <PortfolioOfChange />
         </div>
       </section>
 
-      {/* Connect With Innovators */}
-      {/* <ConnectWithInnovatorSection /> */}
-
-      {/* CTA */}
+      {/* Join Community CTA */}
       <section className="bg-white py-14 lg:py-20">
         <div className="flex flex-col lg:flex-row px-8 lg:px-0 lg:space-x-12 gap-8 lg:gap-0 max-w-screen-xl mx-auto">
           <div className="flex flex-col justify-center w-full max-w-lg">
@@ -156,8 +157,15 @@ export const ClientSection = () => {
             <Button
               className="w-fit mt-4 lg:mt-9 text-white text-base"
               size="lg"
+              asChild
             >
-              Join Community
+              <a
+                href={WHATSAPP_COMMUNITY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join the Largest Community of Healthcare Innovators
+              </a>
             </Button>
           </div>
 
@@ -172,11 +180,10 @@ export const ClientSection = () => {
           </div>
         </div>
       </section>
+
       <PartnerSection />
 
       <ContactUsSection />
     </>
-  )
-}
-
-
+  );
+};

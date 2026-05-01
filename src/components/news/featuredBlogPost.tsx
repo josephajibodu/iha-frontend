@@ -14,15 +14,15 @@ interface FeaturedBlogCardProps {
 export function FeaturedBlogCard({ post }: FeaturedBlogCardProps) {
   const postDate = new Date(post._createdAt).toLocaleDateString();
   const postImage = post.mainImage
-    ? urlFor(post.mainImage).url()
+    ? urlFor(post.mainImage).width(1200).height(800).fit("crop").auto("format").url()
     : "/hero-bg.png";
 
 
   return (
-    <section className="mt-20 mb-12">
+    <section className="mt-20 mb-16">
       <div className="overflow-hidden ">
-        <div className="flex flex-col md:flex-row">
-          <div className="lg:w-1/2 p-8">
+        <div className="flex flex-col md:flex-row md:items-center gap-6">
+          <div className="lg:w-3/5 p-8">
             <div className="flex items-center gap-2 mb-4">
               {post?.categories?.length ? (
                 <Badge className="uppercase font-semibold bg-primary-bright-orange">
@@ -45,16 +45,14 @@ export function FeaturedBlogCard({ post }: FeaturedBlogCardProps) {
               Read More
             </Link>
           </div>
-          <div className="lg:w-1/2 relative bg-gray-100 rounded-md overflow-hidden">
+          <div className="lg:w-2/5 relative bg-gray-100 rounded-md overflow-hidden aspect-[4/3] max-w-md mx-auto lg:mx-0">
             <Image
               src={postImage}
               alt={post.title}
-              width={800}
-              height={500} // maintain aspect ratio
-              className="w-full h-auto"
+              fill
+              sizes="(min-width: 1024px) 40vw, (min-width: 768px) 60vw, 100vw"
+              className="object-cover"
               loading="lazy"
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0..."
             />
           </div>
 

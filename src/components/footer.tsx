@@ -1,138 +1,59 @@
 "use client";
 import Link from "next/link";
+import { Linkedin, Facebook, Twitter, Instagram } from "lucide-react";
 
-const resources = [
-  {
-    label: "Bioinformatics",
-    link: "#",
-  },
-  {
-    label: "Data Governance",
-    link: "#",
-  },
-  {
-    label: "Design Thinking",
-    link: "#",
-  },
-  {
-    label: "Digital Health and Climate Change",
-    link: "#",
-  },
-  {
-    label: "Digital Health Landscape in Africa",
-    link: "#",
-  },
-  {
-    label: "Health Informatics",
-    link: "#",
-  },
-  {
-    label: "Human Centered Design",
-    link: "#",
-  },
-  {
-    label: "Lean Methodology",
-    link: "#",
-  },
-  {
-    label: "Maturity Model for DH",
-    link: "#",
-  },
-  {
-    label: "One Health Policy Framework",
-    link: "#",
-  },
-  {
-    label: "WHO Digital Health Guideline",
-    link: "#",
-  },
+// LinkedIn URL — IHA to supply official company page; placeholder until then.
+const LINKEDIN_URL = "https://www.linkedin.com/company/innovate-health-africa/";
+
+const programmeLinks = [
+  { label: "Training Programmes", href: "/training-programmes" },
+  { label: "Research", href: "/research" },
+  { label: "Innovations", href: "/innovations" },
 ];
 
-const organizations = [
-  {
-    label: "Innovators Network",
-    link: "#",
-  },
-  {
-    label: "School of Healthcare Innovation",
-    link: "#",
-  },
-  {
-    label: "Mission",
-    link: "#",
-  },
-  {
-    label: "Innovation Support",
-    link: "#",
-  },
-  {
-    label: "Strategic Objectives",
-    link: "#",
-  },
-  {
-    label: "Team",
-    link: "#",
-  },
-  {
-    label: "Values",
-    link: "#",
-  },
-  {
-    label: "Venture Studio",
-    link: "#",
-  },
-  {
-    label: "Vision",
-    link: "#",
-  },
+const otherLinks = [
+  { label: "News & Updates", href: "/news" },
+  { label: "Partnerships", href: "/partnership" },
+  { label: "Contact", href: "/contact" },
 ];
 
-const more = [
+const socials = [
   {
-    label: "AIBot",
-    link: "#",
+    label: "LinkedIn",
+    href: LINKEDIN_URL,
+    Icon: Linkedin,
   },
   {
-    label: "DigitalHealth London",
-    link: "#",
+    label: "Facebook",
+    href: "https://www.facebook.com/innovatehealthafrica",
+    Icon: Facebook,
   },
   {
-    label: "Digital Health Africa",
-    link: "#",
+    label: "Twitter / X",
+    href: "https://x.com/innovatehealth",
+    Icon: Twitter,
   },
   {
-    label: "Digital Health India",
-    link: "#",
-  },
-  {
-    label: "Digital Health London",
-    link: "#",
-  },
-  {
-    label: "Health Innovation Courses",
-    link: "#",
-  },
-  {
-    label: "Investors Network",
-    link: "#",
+    label: "Instagram",
+    href: "https://www.instagram.com/innovatehealthafrica",
+    Icon: Instagram,
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-primary py-24">
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 lg:gap-y-0 w-full max-w-screen-xl px-8 mx-auto">
-        <div className="flex flex-col gap-4 lg:gap-8 lg:row-span-2">
-          <h5 className="text-md md:text-2xl text-accent font-[500] leading-normal">
-            Resources
-          </h5>
-
-          <ul className="space-y-1 md:space-y-3">
-            {resources.map(({ label, link }, index) => (
-              <li key={index}>
+    <footer className="bg-primary py-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-screen-xl px-8 mx-auto">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-xl md:text-2xl text-accent font-medium leading-normal">
+            Core Programmes
+          </h2>
+          <ul className="space-y-3">
+            {programmeLinks.map(({ label, href }) => (
+              <li key={href}>
                 <Link
-                  href={link}
-                  className="text-xs lg:text-base font-[300] text-white hover:underline"
+                  href={href}
+                  className="text-base font-light text-white hover:text-accent hover:underline transition-colors"
                 >
                   {label}
                 </Link>
@@ -141,60 +62,59 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4 lg:gap-8">
-          <h5 className="text-md md:text-2xl text-accent font-[500] leading-normal">
-            Our Organization
-          </h5>
-
-          <ul className="space-y-1 md:space-y-3">
-            {organizations.map(({ label, link }, index) => (
-              <li key={index}>
-                <Link
-                  href={link}
-                  className="text-xs lg:text-base font-[300] text-white hover:underline"
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex flex-col gap-4 lg:gap-8">
-          <h5 className="text-md md:text-2xl text-accent font-[500] leading-normal">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-xl md:text-2xl text-accent font-medium leading-normal">
             More
-          </h5>
-
-          <ul className="space-y-1 md:space-y-3">
-            {more.map(({ label, link }, index) => (
-              <li key={index}>
+          </h2>
+          <ul className="space-y-3">
+            {otherLinks.map(({ label, href }) => (
+              <li key={href}>
                 <Link
-                  href={link}
-                  className="text-xs lg:text-base font-[300] text-white hover:underline"
+                  href={href}
+                  className="text-base font-light text-white hover:text-accent hover:underline transition-colors"
                 >
                   {label}
                 </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <h2 className="text-xl md:text-2xl text-accent font-medium leading-normal">
+            Follow Us
+          </h2>
+          <ul className="flex gap-4">
+            {socials.map(({ label, href, Icon }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="size-10 inline-flex items-center justify-center rounded-full bg-white/10 hover:bg-accent/30 text-white transition-colors"
+                >
+                  <Icon size={18} />
+                </a>
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      <div className="text-accent flex flex-col lg:flex-row items-center lg:justify-between gap-8 lg:gap-0 w-full max-w-screen-xl mx-auto px-4 pt-24">
-        <span className="text-xs lg:text-lg font-[300]">
-          @2024 INNOVATEHEALTH AFRICA. ALL RIGHT RESERVED
+      <div className="text-accent flex flex-col lg:flex-row items-center lg:justify-between gap-6 lg:gap-0 w-full max-w-screen-xl mx-auto px-8 pt-16">
+        <span className="text-xs lg:text-sm font-light">
+          © {new Date().getFullYear()} INNOVATEHEALTH AFRICA. ALL RIGHTS RESERVED.
         </span>
 
         <div className="flex text-white">
           <Link
             href="#"
-            className="after:content-['|'] after:px-4 text-xs lg:text-base hover:underline"
+            className="after:content-['|'] after:px-4 text-xs lg:text-sm hover:underline"
           >
-            {" "}
             Terms of Use
           </Link>
-          <Link href="#" className="text-xs lg:text-base hover:underline">
-            {" "}
+          <Link href="#" className="text-xs lg:text-sm hover:underline">
             Privacy Policy
           </Link>
         </div>

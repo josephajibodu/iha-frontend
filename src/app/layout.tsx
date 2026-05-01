@@ -98,9 +98,9 @@ const fontGilroy = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://innovatehealth.africa"),
-  title: "Innovate Health Africa - Transforming Healthcare in Africa",
+  title: "Innovate Health Africa | Advancing Equitable Healthcare in Africa",
   description:
-    "Innovate Health Africa is revolutionizing healthcare across the continent by leveraging cutting-edge solutions designed by Africans, for Africa. Join us in building a healthier future.",
+    "Innovate Health Africa is advancing Equitable Healthcare in Africa through Innovation, Research, and Workforce Capacity Development",
   keywords: [
     "Innovate Health Africa",
     "Healthcare Innovation",
@@ -111,9 +111,9 @@ export const metadata: Metadata = {
     "Healthcare Startups Africa",
   ],
   openGraph: {
-    title: "Innovate Health Africa - Transforming Healthcare in Africa",
+    title: "Innovate Health Africa | Advancing Equitable Healthcare in Africa",
     description:
-      "Discover how Innovate Health Africa is reshaping healthcare with innovative, Africa-centered solutions.",
+      "Innovate Health Africa is advancing Equitable Healthcare in Africa through Innovation, Research, and Workforce Capacity Development",
     url: "/",
     type: "website",
     images: [
@@ -121,15 +121,15 @@ export const metadata: Metadata = {
         url: OGImage.src,
         width: 1200,
         height: 600,
-        alt: "Innovate Health Africa - Transforming Healthcare in Africa",
+        alt: "Innovate Health Africa | Advancing Equitable Healthcare in Africa",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Innovate Health Africa - Transforming Healthcare in Africa",
+    title: "Innovate Health Africa | Advancing Equitable Healthcare in Africa",
     description:
-      "Building tomorrow's healthcare solutions today—designed by Africans, for Africa.",
+      "Advancing Equitable Healthcare in Africa through Innovation, Research, and Workforce Capacity Development",
     images: [OGImage.src],
   },
 };

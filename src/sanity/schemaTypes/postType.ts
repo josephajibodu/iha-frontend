@@ -51,6 +51,8 @@ export const postType = defineType({
       name: "categories",
       type: "array",
       of: [defineArrayMember({ type: "reference", to: { type: "category" } })],
+      validation: (rule) =>
+        rule.required().min(1).error("Every post must be assigned to at least one category."),
     }),
     defineField({
       name: "publishedAt",

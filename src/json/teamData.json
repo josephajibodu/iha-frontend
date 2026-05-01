@@ -20,7 +20,7 @@
     "title": "Director of Programs",
     "image": "/team/Faridat.png",
     "funFact": "",
-    "linkedIn": "#",
+    "linkedIn": "https://www.linkedin.com/in/faridat-ibidun/",
     "tag": "Leadership"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Director of Technology",
     "image": "/team/Joseph.png",
     "funFact": "",
-    "linkedIn": "#",
+    "linkedIn": "https://www.linkedin.com/in/josephajibodu/",
     "tag": "Leadership"
   },
     {
@@ -56,6 +56,30 @@
     "tag": "Research & Development"
   },
   {
+    "name": "Micheal Oluwafemi Adeniyi",
+    "title": "Research Associate",
+   "image": "/team/michael-oluwafemi-adeniyi.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/michealadeniyi",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Dr. Saravanan Thangarajan",
+    "title": "R&D Consultant",
+    "image": "/team/Saravanan-Thangarajan.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/saravanan-thangarajan/",
+    "tag": "Research & Development"
+  },
+  {
+    "name": "Joan Lusanji",
+    "title": "Research Associate (R&D)",
+    "image": "",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Research & Development"
+  },
+  {
     "name": "Raheema Saadan",
     "title": "Program Manager, Tanzania",
     "image": "/team/Rehema-Saadan.png",
@@ -64,36 +88,36 @@
     "tag": "Programs"
   },
   {
-    "name": "Omojolaade Zainab Omotosho",
-    "title": "Creative Designer",
-    "image": "/team/Omotosho-Omojolaade.jpg",
+    "name": "Faith Keru",
+    "title": "Program Manager, Kenya",
+     "image": "/team/faith-keru.jpg",
     "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/omotosho-omojolaade",
-    "tag": "Communications"
+    "linkedIn": "https://www.linkedin.com/in/faith-keru-a0b087219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "tag": "Programs"
   },
-  {
-    "name": "Olayiwola Olaitan Hafiz",
-    "title": "Product Designer",
-    "image": "/team/Olayiwola-Olaitan.jpg",
+   {
+    "name": "Solome Nekahiwot",
+    "title": "Program Manager, Ethiopia",
+    "image": "/team/Solome-Nekahiwot.JPG",
     "funFact": "",
     "linkedIn": "#",
-    "tag": "Design & Innovation"
+    "tag": "Programs"
   },
   {
-    "name": "Nelson Kamanda",
-    "title": "Grants Manager",
-    "image": "/team/Nelson-Kamanda.jpg",
+    "name": "Tobechukwu Onwurah",
+    "title": "Program Manager, Africa - Diaspora",
+    "image": "/team/tobechukwu-onwurah.jpg",
     "funFact": "",
     "linkedIn": "#",
-    "tag": "Partnership & Grants"
+    "tag": "Programs"
   },
-  {
-    "name": "Micheal Oluwafemi Adeniyi",
-    "title": "Research Associate",
-   "image": "/team/michael-oluwafemi-adeniyi.jpg",
+   {
+    "name": "Raphael Oyeniji",
+    "title": "Program Manager, Nigeria",
+    "image": "",
     "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/michealadeniyi",
-    "tag": "Research & Development"
+    "linkedIn": "#",
+    "tag": "Programs"
   },
   {
     "name": "Marvelous Olawale",
@@ -120,14 +144,6 @@
     "tag": "Design & Innovation"
   },
   {
-    "name": "Heeba Hazzan Ahmed",
-    "title": "Product Designer",
-    "image": "/team/Heeba-Hassan.png",
-    "funFact": "",
-    "linkedIn": "#",
-    "tag": "Design & Innovation"
-  },
-  {
     "name": "Ermiyas Neway",
     "title": "AI Engineer",
     "image": "/team/ermiyas-neway.jpg",
@@ -136,27 +152,11 @@
     "tag": "Design & Innovation"
   },
   {
-    "name": "Dr. Saravanan Thangarajan",
-    "title": "R&D Consultant",
-    "image": "/team/Saravanan-Thangarajan.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/saravanan-thangarajan/",
-    "tag": "Research & Development"
-  },
-  {
     "name": "Agbonkonkon Blessing",
     "title": "Data Analyst",
     "image": "/team/Agbonkonkon-Blessing.jpg",
     "funFact": "",
     "linkedIn": "https://www.linkedin.com/in/blessing-fausta-pharmd-mpsgh-mpsn-50422618a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    "tag": "Design & Innovation"
-  },
-  {
-    "name": "Dr. Melissa Okiemen",
-    "title": "Product Manager",
-   "image": "/team/melissa-okiemen.jpg",
-    "funFact": "",
-    "linkedIn": "#",
     "tag": "Design & Innovation"
   },
   {
@@ -176,19 +176,35 @@
     "tag": "Design & Innovation"
   },
   {
-    "name": "Izhar Mahjoub",
-    "title": "Digital Health Consultant",
-  "image": "/team/izhar-mahjoub.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
-    "tag": "Consultations"
-  },
-  {
     "name": "Fausat Abiola",
     "title": "Product Manager",
      "image": "/team/fausat-abiola.jpg",
     "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "linkedIn": "#",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Dr. Melissa Okiemen",
+    "title": "Product Manager",
+   "image": "/team/melissa-okiemen.jpg",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Heeba Hazzan Ahmed",
+    "title": "Product Designer",
+    "image": "/team/Heeba-Hassan.png",
+    "funFact": "",
+    "linkedIn": "#",
+    "tag": "Design & Innovation"
+  },
+  {
+    "name": "Olayiwola Olaitan Hafiz",
+    "title": "Product Designer",
+    "image": "/team/Olayiwola-Olaitan.jpg",
+    "funFact": "",
+    "linkedIn": "#",
     "tag": "Design & Innovation"
   },
   {
@@ -196,40 +212,32 @@
     "title": "Partnership Manager",
     "image": "/team/tadeo-wandera.jpg",
     "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "linkedIn": "#",
     "tag": "Partnership & Grants"
+  },
+   {
+    "name": "Omojolaade Zainab Omotosho",
+    "title": "Creative Designer",
+    "image": "/team/Omotosho-Omojolaade.jpg",
+    "funFact": "",
+    "linkedIn": "https://www.linkedin.com/in/omotosho-omojolaade",
+    "tag": "Communications"
   },
   {
     "name": "Maryflorence Akinyi Omollo ",
     "title": "Communications Specialist",
     "image": "/team/mary-florence-omollo.jpg",
     "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "linkedIn": "#",
     "tag": "Communications"
   },
   {
     "name": "Emmanuella Mawuse Donani",
     "title": "Communications Manager",
-   "image": "/team/emmanuel-maws.jpg",
+   "image": "/team/emmauella-maws.jpg",
     "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
+    "linkedIn": "#",
     "tag": "Communications"
-  },
-  {
-    "name": "Joan Lusanji",
-    "title": "Research Associate (R&D)",
-    "image": "",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/adeolaabdulramon",
-    "tag": "Research & Development"
-  },
-  {
-    "name": "Faith Keru",
-    "title": "Program Manager, Kenya",
-     "image": "/team/faith-keru.jpg",
-    "funFact": "",
-    "linkedIn": "https://www.linkedin.com/in/faith-keru-a0b087219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "tag": "Programs"
   },
   {
     "name": "Tobiloba Adegboyega",
@@ -241,34 +249,25 @@
   }, {
     "name": "Oluwasolabomi Onadipe",
     "title": "Corporate Communications Strategist",
-    "image": "/team/tobiloba-adegboyega.jpg",
+    "image": "/team/oluwasolabomi-onadipe.jpg",
     "funFact": "",
     "linkedIn": "#",
     "tag": "Communications"
-  },
-   {
-    "name": "Raphael Oyeniji",
-    "title": "Program Manager, Nigeria",
-    "image": "",
+  } ,{
+    "name": "Izhar Mahjoub",
+    "title": "Digital Health Consultant",
+  "image": "/team/izhar-mahjoub.jpg",
     "funFact": "",
     "linkedIn": "#",
-    "tag": "Programs"
+    "tag": "Consultations"
   },
    {
-    "name": "Solome Nekahiwot",
-    "title": "Program Manager, Ethiopia",
-    "image": "/team/Solome-Nekahiwot.JPG",
+    "name": "Nelson Kamanda",
+    "title": "Grants Manager",
+    "image": "/team/Nelson-Kamanda.jpg",
     "funFact": "",
-    "linkedIn": "",
-    "tag": "Programs"
-  },
-  {
-    "name": "Tobechukwu Onwurah",
-    "title": "Program Manager, Africa - Diaspora",
-    "image": "/team/tobechukwu-onwirah.jpg",
-    "funFact": "",
-    "linkedIn": "",
-    "tag": "Programs"
+    "linkedIn": "#",
+    "tag": "Partnership & Grants"
   }
 ]
 

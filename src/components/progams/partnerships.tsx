@@ -43,7 +43,7 @@ export default function PartnerShipView() {
       workItems={programsWorkItems}
       showViewMoreButton={true}
       viewMoreButtonText="Partner With Us"
-      viewMoreButtonLink="/programs"
+      viewMoreButtonLink="/training-programmes"
       className="py-20"
     />
   );

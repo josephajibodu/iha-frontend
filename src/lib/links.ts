@@ -30,29 +30,29 @@ const LINKS = {
     title: "Work with us",
     href: "/careers",
   },
-  VentureLab: {
-    title: "Programs & Projects",
-    href: "/programs",
+  TrainingProgrammes: {
+    title: "Training Programmes",
+    href: "/training-programmes",
     description:
-      "At Innovate Health Africa, we drive impactful programs and projects aimed.",
+      "Competency-based training equipping health workers from frontline to leadership.",
   },
-  InnovationSupport: {
+  Research: {
     title: "Research",
-    href: "#",
+    href: "/research",
     description:
-      "Our research initiatives explore critical health issues, assess emerging trends,...",
+      "Implementation research that turns insight into stronger programmes and policies.",
   },
-  SchoolOfHealthcareInnovation: {
+  Innovations: {
+    title: "Innovations",
+    href: "/innovations",
+    description:
+      "Digital health solutions designed with the communities they serve.",
+  },
+  Partnership: {
     title: "Partnership",
     href: "/partnership",
     description:
       "We build strong partnerships with governments, non-profits, private sector.",
-  },
-  InnovatorsNetwork: {
-    title: "Proucts & Tools",
-    href: "#",
-    description:
-      "Innovate Health Africa develops and deploys cutting-edge digital health.",
   },
 };
 
